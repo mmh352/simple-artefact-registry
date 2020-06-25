@@ -1,6 +1,6 @@
 # Changes
 
-# DEV
+# v0.2.0
 
 * **New**: Made the server host configurable
 * **Bugfix**: Correctly handle missing server configurations
