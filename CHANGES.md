@@ -1,5 +1,9 @@
 # Changes
 
+# DEV
+
+* **Bugfix**: Fix a bug in determining leaf artefacts
+
 # v0.3.0
 
 * **Bugfix**: Host commandline argument can be any string value

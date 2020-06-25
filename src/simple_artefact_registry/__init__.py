@@ -126,7 +126,7 @@ def build_urls(config, base_url='', base_settings=None):
     else:
         settings = dict([(key[1:], value) for key, value in config.items() if key.startswith('_')])
     for key, value in artefacts:
-        if value:
+        if [k for k in value.keys() if not k.startswith('_')]:
             urls.extend(build_urls(value, base_url=f'{base_url}/{key}', base_settings=settings))
         else:
             urls.append((f'{base_url}/{key}', ArtefactHandler, {'path': f'{base_url}/{key}', 'settings': settings}))
