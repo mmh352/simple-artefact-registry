@@ -31,7 +31,8 @@ All three settings are inherited from parent keys, but can be overriden by child
 """
 
 from copy import deepcopy
-from os.path import exists
+from os import makedirs
+from os.path import exists, dirname
 from tornado import web, ioloop, gen, iostream
 
 
@@ -92,6 +93,8 @@ class ArtefactHandler(web.RequestHandler):
                     raise web.HTTPError(401)
             else:
                 raise web.HTTPError(401)
+        if not exists(dirname(f'{self._settings["base_directory"]}{self._path}')):
+            makedirs(dirname(f'{self._settings["base_directory"]}{self._path}'))
         with open(f'{self._settings["base_directory"]}{self._path}', 'wb') as out_f:
             out_f.write(self.request.body)
         self.set_status(204)
