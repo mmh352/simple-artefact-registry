@@ -1,5 +1,9 @@
 # Changes
 
+# DEV
+
+* **Bugfix**: Host commandline argument can be any string value
+
 # v0.2.0
 
 * **New**: Made the server host configurable

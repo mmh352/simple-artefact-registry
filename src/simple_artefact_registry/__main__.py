@@ -23,7 +23,7 @@ from . import run_server
 parser = ArgumentParser(description='Simple Artefact Registry Server')
 parser.add_argument('-c', '--config', dest='config', default='sar.yaml', help='Configuration file to use [sar.yaml]')
 parser.add_argument('-p', '--port', dest='port', default=None, type=int, help='Override the port set in the configuration')
-parser.add_argument('--host', dest='host', default=None, type=int, help='Override the host set in the configuration')
+parser.add_argument('--host', dest='host', default=None, help='Override the host set in the configuration')
 args = parser.parse_args()
 
 with open(args.config) as conf:
