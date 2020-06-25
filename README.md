@@ -14,4 +14,4 @@ The following options are available:
 * ``-c`` ``--config``: The configuration file to load. Defaults to "sar.yaml"
 * ``-p`` ``--port``: The port to listen on. Defaults to 8080
 
-The configuration file format is documented (here)[https://github.com/mmh352/simple-artefact-registry/blob/default/src/simple_artefact_registry/__init__.py]
+The configuration file format is documented [here](https://github.com/mmh352/simple-artefact-registry/blob/default/src/simple_artefact_registry/__init__.py).
