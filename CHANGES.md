@@ -1,6 +1,6 @@
 # Changes
 
-# DEV
+# v0.3.0
 
 * **Bugfix**: Host commandline argument can be any string value
 * **Bugfix**: Host and port were always set to the default value
