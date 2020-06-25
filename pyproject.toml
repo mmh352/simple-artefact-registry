@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "simple-artefact-registry"
-version = "0.3.0"
+version = "0.4.0"
 description = "A simple web-based registry for any kind of artefact"
 authors = ["Mark Hall <mark.hall@open.ac.uk>"]
 license = "MIT"

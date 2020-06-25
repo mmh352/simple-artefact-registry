@@ -1,6 +1,6 @@
 # Changes
 
-# DEV
+# v0.4.0
 
 * **Bugfix**: Fix a bug in determining leaf artefacts
 
