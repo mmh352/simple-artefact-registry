@@ -9,6 +9,7 @@ files. The available artefacts are configured using a YAML file with the followi
 .. code-block:: yaml
 
    server:
+     host: host/ip
      port: XXXX
    artefacts:
      dir_name:
@@ -146,6 +147,13 @@ def run_server(config):
     :param config: The configuration to use
     :type config: ``dict``
     """
+    if 'server' not in config:
+        config['server'] = {'port': 8080, 'host': '0.0.0.0'}
+    else:
+        if 'port' not in config:
+            config['server']['port'] = 8080
+        if 'host' not in config:
+            config['server']['host'] = '0.0.0.0'
     app = build_app(config)
-    app.listen(config['server']['port'])
+    app.listen(config['server']['port'], config['server']['host'])
     ioloop.IOLoop.current().start()
