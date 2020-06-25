@@ -153,9 +153,9 @@ def run_server(config):
     if 'server' not in config:
         config['server'] = {'port': 8080, 'host': '0.0.0.0'}
     else:
-        if 'port' not in config:
+        if 'port' not in config['server']:
             config['server']['port'] = 8080
-        if 'host' not in config:
+        if 'host' not in config['server']:
             config['server']['host'] = '0.0.0.0'
     app = build_app(config)
     app.listen(config['server']['port'], config['server']['host'])

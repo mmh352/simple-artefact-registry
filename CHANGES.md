@@ -3,6 +3,7 @@
 # DEV
 
 * **Bugfix**: Host commandline argument can be any string value
+* **Bugfix**: Host and port were always set to the default value
 
 # v0.2.0
 
